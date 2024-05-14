@@ -3,7 +3,7 @@ function realizarOperacoes() {
     let b = document.getElementById("outronumero").value;
     let intA = parseInt(a);
     let intB = parseInt(b); 
-    document.getElementById("dif").textContent = (intA-intB);
+    document.getElementById("dif").textContent = Math.abs((intA-intB));
     document.getElementById("multmult").textContent = (2*intA+3*intB)
     document.getElementById("mult").textContent = (intA*intB)
     if (a>b) {
