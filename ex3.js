@@ -13,8 +13,8 @@ function calcularINSS(salario) {
 }
 
 function pegarValores() {
-    let nome = prompt("Digite seu nome completo: ");
-    let salarioBruto = parseFloat(prompt("Digite seu Salário Bruto: "));
+    let nome = document.getElementById("nome").value;
+    let salarioBruto = document.getElementById("salarioBruto").value;
     return[nome, salarioBruto];
 }
 
@@ -28,10 +28,12 @@ function mostrarValores () {
     let salarioLiquido = calculo[1];
     let valorDesconto = calculo[2];
 
-    console.log("Seu nome é: " + nome);
-    console.log("Seu salario bruto é: " + salarioBruto.toString());
-    console.log("O desconto do INSS no seu salário é: " + percentualDesconto + "%, totalizando um valor de " + valorDesconto.toString());
-    console.log("Seu salário líquido é: " + salarioLiquido.toString());
+    document.getElementById("pNome").textContent = ("Seu nome é: " + nome);
+    document.getElementById("pBruto").textContent = ("Seu salario bruto é: " + salarioBruto.toString());
+    document.getElementById("pValorINSS").textContent = ("O desconto do INSS no seu salário é: " + percentualDesconto + "%, totalizando um valor de " + valorDesconto.toString());
+    document.getElementById("pLiquido").textContent = ("Seu salário líquido é: " + salarioLiquido.toString());
 }
 
-mostrarValores()
+function proximaPagina() {
+    window.location.href = 'index.html';
+}

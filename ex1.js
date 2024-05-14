@@ -1,13 +1,19 @@
-let a = prompt("Digite um inteiro: ");
-let b = prompt("Digite outro inteiro: ");
-let intA = parseInt(a);
-let intB = parseInt(b);
-console.log(intA-intB);
-console.log(2*intA+3*intB)
-console.log(intA*intB)
-if (a>b) {
-    console.log(a + " > " + b)
+function realizarOperacoes() {
+    let a = document.getElementById("numero").value;
+    let b = document.getElementById("outronumero").value;
+    let intA = parseInt(a);
+    let intB = parseInt(b); 
+    document.getElementById("dif").textContent = (intA-intB);
+    document.getElementById("multmult").textContent = (2*intA+3*intB)
+    document.getElementById("mult").textContent = (intA*intB)
+    if (a>b) {
+        document.getElementById("compara").textContent = (a + " > " + b)
 
-} else {
-    console.log(b + " > " + a)
+    } else {
+        document.getElementById("compara").textContent = (b + " > " + a)
+    }
+}
+
+function proximaPagina() {
+    window.location.href = 'segunda.html';
 }
